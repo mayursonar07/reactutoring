@@ -1,0 +1,15 @@
+# Ignore node_modules directory
+node_modules/
+
+
+#Ignore pacel cache
+.parcel-cache/
+
+# Ignore files and directories generated during development
+dist/
+build/
+tmp/
+
+# Ignore sensitive information
+config.js
+.env
