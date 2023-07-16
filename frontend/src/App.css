@@ -86,7 +86,7 @@ footer {
 input {
     border-color: '#d1d1d6';
     border-radius:'10px';
-    margin: 5px;
+    margin-bottom: 10px;
     padding: 5px;
 }
 
@@ -95,4 +95,12 @@ input {
     justify-content:'space-around' !important;
     color:rgb(0, 255, 102);
     padding: 10px;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    border-radius:'5px';
+    background: black;
+    color: white;
 }

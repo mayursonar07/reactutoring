@@ -1,29 +1,33 @@
 const express = require('express');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const app = express();
 
+// Enable CORS for all routes
+app.use(cors());
 app.use(express.json());
 
 app.post('/send-email', (req, res) => {
-  const { name, email, message } = req.body;
+  const { fname,lname, email, topics, contact } = req.body;
 
   // Create a transporter using your email provider's SMTP settings
   const transporter = nodemailer.createTransport({
-    host: 'smtp.example.com',
+    service: 'gmail',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false,
     auth: {
-      user: 'your-email@example.com',
-      pass: 'your-email-password',
+      user: 'mayurprojects07@gmail.com',
+      pass: 'bdkzyuheraxbkksj',
     },
   });
 
   // Compose the email
   const mailOptions = {
-    from: 'your-email@example.com',
-    to: 'recipient@example.com',
+    from: 'mayurprojects07@gmail.com',
+    to: 'mayurprojects07@gmail.com',
     subject: 'New Enquiry',
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    text: `Name: ${fname+ " "+lname}\nEmail: ${email}\nMessage: ${topics}\nContact: ${contact}`,
   };
 
   // Send the email
