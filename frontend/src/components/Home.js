@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div id='' style={{background:'black'}}>
       <div style={{background:'white'}}>
-        Hone
+        Home
       </div>
     </div>
   )
