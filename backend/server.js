@@ -42,7 +42,7 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-const PORT = 3001; // Choose a port for your backend server
+const PORT = 3000; // Choose a port for your backend server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
