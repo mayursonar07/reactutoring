@@ -7,7 +7,7 @@ import ContactInfo from './ContactInfo'
 
 const ContactPage = () => {
 
-  const [isMobile] = useMediaQuery("(max-width: 420px)");
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
 
     // Define validation schema using Yup
     const validationSchema = Yup.object().shape({
