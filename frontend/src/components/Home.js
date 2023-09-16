@@ -1,12 +1,11 @@
+import { Flex } from '@chakra-ui/react'
 import React from 'react'
 
 const Home = () => {
   return (
-    <div id='' style={{background:'black'}}>
-      <div style={{background:'white'}}>
-        Home
-      </div>
-    </div>
+    <Flex bg="#fefaed" h='calc(100vh - 120px)'>
+      Home
+    </Flex>
   )
 }
 

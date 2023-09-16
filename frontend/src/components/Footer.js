@@ -4,7 +4,7 @@ const Footer = () => {
   // Footer component
     return (
       <footer className='footer'>
-        <p>Common Template Footer</p>
+       
       </footer>
     );
 

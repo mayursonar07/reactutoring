@@ -5,6 +5,7 @@ import AdvancedJSCourse from './AdvancedJSCourse';
 import BasicJSCourse from './BasicJSCourse';
 import ReactJSCourse from './ReactJSCourse';
 import ContactUs from './ContactUs';
+import ContactPage from './contact/ContactPage';
 
 const ContentArea = () => {
     return (
@@ -15,7 +16,8 @@ const ContentArea = () => {
                 <Route path="/courses/basic-javascript" element={<BasicJSCourse/>} />
                 <Route path="/courses/advanced-js" element={<AdvancedJSCourse/>} />
                 <Route path="/courses/react" element={<ReactJSCourse/>} />
-                <Route path="/contact" element={<ContactUs/>} />
+                {/* <Route path="/contact" element={<ContactUs/>} /> */}
+                <Route path="/contact" element={<ContactPage/>} />
             </Routes>
         </div>
       );

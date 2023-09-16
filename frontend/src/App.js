@@ -4,6 +4,7 @@ import './App.css';
 import NavigationBar from './components/NavigationBar';
 import ContentArea from './components/ContentArea';
 import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
         <div>
 
           <div className="container">
-            <NavigationBar />
+            <NavBar />
             <ContentArea />
             <Footer />
           </div>
