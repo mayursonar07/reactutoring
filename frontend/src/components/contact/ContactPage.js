@@ -4,6 +4,7 @@ import React from 'react'
 import * as Yup from 'yup'
 import ContactForm from './ContactForm'
 import ContactInfo from './ContactInfo'
+import Courses from '../Courses'
 
 const ContactPage = () => {
 
@@ -16,6 +17,9 @@ const ContactPage = () => {
         topics: Yup.string().required('Please mention at least 1 topic'),
         contact: Yup.number().required('Please mention your whatsapp number'),
     })
+
+    const contactInfoTitle = 'Get in Touch';
+    const body = 'Please submit your details to receive a callback';
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -50,11 +54,11 @@ const ContactPage = () => {
         ?
         <Flex id='contactPage-mainSection' bg="#fefaed" h='500px' flexDirection='column'>
           <Center id='section-left' width='100%' h='100%' mb='15px'>
-            <ContactInfo/>
+            <ContactInfo title={contactInfoTitle} bodyText={body}/>
           </Center>
           {/* <Divider orientation='vertical' /> */}
           <Center id='section-right' width='100%' h='100%' mb='15px'>
-            <Box width='80%' height='380px' bg='white' borderRadius='15px' color='gray.300' border='1px'>
+            <Box width='80%' height='430px' bg='white' borderRadius='15px' color='gray.300' border='1px'>
               <ContactForm/>
             </Box>
           </Center>
@@ -62,16 +66,7 @@ const ContactPage = () => {
 
         :
 
-        <Flex id='contactPage-mainSection' bg="#fefaed" h='500px'>
-          <Center id='section-left' width='50%' h='100%'>
-            <ContactInfo/>
-          </Center>
-          <Center id='section-right' width='50%' h='100%'>
-            <Box width='80%' height='80%' bg='white' borderRadius='15px' color='gray.300' border='1px'>
-              <ContactForm/>
-            </Box>
-          </Center>
-        </Flex>
+        <Courses/>
       }
         
     </>

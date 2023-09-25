@@ -1,15 +1,32 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Center, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const ContactInfo = () => {
+const ContactInfo = ({title, bodyText, topicList}) => {
+    
+    let renderList = '';
+    if(topicList) {
+        renderList = topicList.map((topic)=>{
+            return (
+                <li>{topic}</li>
+            )
+        })
+    }
   return (
     <>
     <Box width='80%' height='80%'>
-        <Heading size='2xl' margin='20px'> 
-            Get in Touch
-        </Heading>
-        <Text>Please submit your details to receive a callback</Text>
-        </Box>
+        <Center flexDirection='column'>
+            <Heading size='xl' margin='20px'> 
+                {title}
+            </Heading>
+            <Text>{bodyText}</Text>
+            <Text>
+                <ul>
+
+                {renderList}
+                </ul>
+                </Text>
+        </Center>
+    </Box>
     </>
   )
 }

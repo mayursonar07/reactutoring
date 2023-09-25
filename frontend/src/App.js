@@ -12,9 +12,11 @@ const App = () => {
       <div className="App">
         <div>
 
-          <div className="container">
-            <NavBar />
-            <ContentArea />
+          <div className="main-app-container">
+            <div className='main-body-container'>
+              <NavBar />
+              <ContentArea />
+            </div>
             <Footer />
           </div>
         </div>
